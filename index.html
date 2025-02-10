@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.css"/>
+  <style>
+    .table-container {
+      width: 50%; /* Expanded width */
+      padding: 20px;
+      margin: 0 auto; /* Centers the tables */
+      text-align: center;
+    }
+    .banner {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    table {
+      table-layout: auto; /* Allow column width to adjust */
+      width: 100%;
+    }
+    th, td {
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <img src="BB2.jpg" alt="BargainBuzz" width="184" height="184" style="vertical-align:bottom" align="center">
+  </h1>
+  
+  <div class="table-container">
+    <div class="banner">PreOwned Smartphones</div>
+    <table id="example1" class="display">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th><img src="noon2.jpg" alt="Noon" width="84" height="42"></th>
+          <th><img src="Amazon.png" alt="Amazon" width="82" height="42"></th>
+          <th><img src="Cartlow.png" alt="Cartlow" width="84" height="42"></th>
+          <th><img src="Revibe.jpg" alt="Revibe" width="62" height="62"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  
+  <div class="table-container">
+    <div class="banner">New Smartphones - Samsung</div>
+    <table id="example2" class="display">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th><img src="noon2.jpg" alt="Noon" width="84" height="42"></th>
+          <th><img src="Amazon.png" alt="Amazon" width="82" height="42"></th>
+          <th><img src="Cartlow.png" alt="Cartlow" width="84" height="42"></th>
+          <th><img src="Revibe.jpg" alt="Revibe" width="62" height="62"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+  <script>
+    new DataTable('#example1', {
+      ajax: 'https://script.google.com/macros/s/AKfycby6jfunKEOz3kBcOcZe3e4qtj3DBFE62r80xTEKbIIbOirGNXd7cixAFS239D30Pzp6/exec',
+      columns: [
+        { data: 'Product' },
+        { data: 'Noon' },
+        { data: 'Amazon' },
+        { data: 'Cartlow' },
+        { data: 'Revibe' }
+      ]
+    });
+
+    new DataTable('#example2', {
+      ajax: 'https://script.google.com/macros/s/AKfycby6jfunKEOz3kBcOcZe3e4qtj3DBFE62r80xTEKbIIbOirGNXd7cixAFS239D30Pzp6/exec',
+      columns: [
+        { data: 'Product' },
+        { data: 'Noon' },
+        { data: 'Amazon' },
+        { data: 'Cartlow' },
+        { data: 'Revibe' }
+      ]
+    });
+  </script>
+</body>
+</html>
